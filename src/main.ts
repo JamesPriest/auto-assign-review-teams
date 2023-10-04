@@ -103,7 +103,11 @@ export async function run() {
     }
 
     if (teams.length > 0) {
+      console.log("Teams length: " + teams.length);
+      console.log("pickOneFromPersonsOrTeam Status: " + pickOneFromPersonsOrTeam);
+      /*
       if (pickOneFromPersonsOrTeam) {
+
         // Picking out 1 person from first team listed
         console.log('Selecting from first team provided: ' + teams[0]);
         const members = await client.rest.teams.listMembersInOrg({
@@ -137,7 +141,9 @@ export async function run() {
                 ?.map((r) => r.login)
                 .join(','),
         );
+
       } else {
+       */
         console.log('Adding teams: ' + teams);
         const teamResponse = await client.rest.pulls.requestReviewers({
           owner: issue.owner,
