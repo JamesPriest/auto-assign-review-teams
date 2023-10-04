@@ -158,8 +158,7 @@ export async function run() {
             teamResponse?.data?.requested_teams?.map((t) => t.slug).join(','),
         );
       }
-    }
-  } catch (error) {
+    } catch (error) {
     console.error(error);
     core.setFailed('Unknown error' + error);
     throw error;
