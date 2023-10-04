@@ -138,6 +138,9 @@ function run() {
                 return;
             }
             if (teams.length > 0) {
+                console.log("Teams length: " + teams.length);
+                console.log("pickOneFromPersonsOrTeam Status: " + pickOneFromPersonsOrTeam);
+                /*
                 if (pickOneFromPersonsOrTeam) {
                     // Picking out 1 person from first team listed
                     console.log("Selecting from first team provided: " + teams[0]);
@@ -166,6 +169,7 @@ function run() {
                         ((_e = (_d = personResponse === null || personResponse === void 0 ? void 0 : personResponse.data) === null || _d === void 0 ? void 0 : _d.requested_reviewers) === null || _e === void 0 ? void 0 : _e.map((r) => r.login).join(",")));
                 }
                 else {
+                 */
                     console.log("Adding teams: " + teams);
                     const teamResponse = yield client.rest.pulls.requestReviewers({
                         owner: issue.owner,
